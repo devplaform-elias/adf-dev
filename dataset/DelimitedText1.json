@@ -1,0 +1,72 @@
+{
+	"name": "DelimitedText1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "marketing_campaign_data_messy.csv",
+				"container": "dropzone"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": " Campaign_ID ",
+				"type": "String"
+			},
+			{
+				"name": "Campaign_Name",
+				"type": "String"
+			},
+			{
+				"name": "Start_Date",
+				"type": "String"
+			},
+			{
+				"name": "End_Date",
+				"type": "String"
+			},
+			{
+				"name": "Channel",
+				"type": "String"
+			},
+			{
+				"name": "Impressions",
+				"type": "String"
+			},
+			{
+				"name": "Clicks ",
+				"type": "String"
+			},
+			{
+				"name": "Spend",
+				"type": "String"
+			},
+			{
+				"name": "Conversions",
+				"type": "String"
+			},
+			{
+				"name": "Active",
+				"type": "String"
+			},
+			{
+				"name": "Clicks",
+				"type": "String"
+			},
+			{
+				"name": "Campaign_Tag",
+				"type": "String"
+			}
+		]
+	}
+}
