@@ -24,7 +24,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "SELECT * FROM dbo.CustomerSource\nWHERE LastUpdated > @{activity('Lookup_LastRunTime').output.firstRow.LastRunTime}\nAND LastUpdated <= @{variables('TriggerTime')}",
+						"sqlReaderQuery": "SELECT * FROM dbo.CustomerSource\nWHERE LastUpdated > CONVERT(datetime2, '@{activity('Lookup_LastRunTime').output.firstRow.LastRunTime}', 127)\nAND LastUpdated <= CONVERT(datetime2, '@{variables('TriggerTime')}', 127)",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
