@@ -1,0 +1,13 @@
+{
+	"name": "RestService1",
+	"properties": {
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://api.loganalytics.azure.com/v1/workspaces/a02c023d-f352-40d2-970c-9ff56a36764e/",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "ManagedServiceIdentity",
+			"aadResourceId": "https://api.loganalytics.io"
+		}
+	}
+}
